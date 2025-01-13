@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="24c36bbd7b031210d7260a89518cb60b" label="Book_requests" max_length="40" name="sn_lms_book_requests" type="collection">
-        <element attributes="edge_encryption_enabled=true" label="return date" max_length="40" name="return_date" type="glide_date"/>
+        <element label="User ID" max_length="32" name="user_id" reference="sys_user" type="reference"/>
+        <element label="Book ID" max_length="32" name="book_id" reference="sn_lms_books" type="reference"/>
+        <element choice="1" label="status" max_length="40" name="status" type="choice">
+            <choice/>
+        </element>
+        <element label="Requested date" max_length="40" name="requested_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="return_date" max_length="40" name="return_date" type="glide_date"/>
+        <index name="index">
+            <element name="book_id"/>
+        </index>
+        <index name="index2">
+            <element name="user_id"/>
+        </index>
     </element>
 </database>

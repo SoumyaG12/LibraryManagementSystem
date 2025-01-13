@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>sn_lms_books</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Update/Delete Book Record</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+	var action_type = current.variables;
+	console.log("-----actiontype------", action_type);
+	// Add your code here
+	if (actionType === 'add') {
+        // Add a new book
+        var newBook = new GlideRecord('sn_lms_books');
+        newBook.initialize();
+        newBook.book_title = current.book_title;
+        newBook.book_author = current.book_author;
+        newBook.genre = current.genre;
+        newBook.total_copies = current.total_copies;
+        newBook.available_copies = current.available_copies;
+        newBook.insert();
+    } else if (actionType === 'update' && relatedBookId) {
+        // Update an existing book
+        var updateBook = new GlideRecord('sn_lms_books');
+		updateBook.addQuery("sys_id", relatedBookId);
+		updateBook.query();
+        if (updateBook.next()) {
+            updateBook.book_title = current.book_title;
+            updateBook.book_author = current.book_author;
+            updateBook.genre = current.genre;
+            updateBook.total_copies = current.total_copies;
+            updateBook.available_copies = current.available_copies;
+            updateBook.update();
+        }
+    } else if (actionType === 'delete' && relatedBookId) {
+        // Delete an existing book
+        var deleteBook = new GlideRecord('sn_lms_books');
+		deleteBook.addQuery("sys_id", relatedBookId);
+		deleteBook.query();
+        if (deleteBook.next()) {
+            deleteBook.deleteRecord();
+        }
+    }
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 16:37:29</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f957250e7b471210d7260a89518cb6d7</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Update/Delete Book Record</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="LibraryManagementSystem" source="sn_lms">e242673d7b031210d7260a89518cb696</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LibraryManagementSystem">e242673d7b031210d7260a89518cb696</sys_scope>
+        <sys_update_name>sys_script_f957250e7b471210d7260a89518cb6d7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 16:51:09</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=f957250e7b471210d7260a89518cb6d7"/>
+</record_update>
