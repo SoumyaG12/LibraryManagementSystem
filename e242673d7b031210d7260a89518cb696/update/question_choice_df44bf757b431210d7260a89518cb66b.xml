@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <inactive>false</inactive>
+        <misc>0</misc>
+        <order>51</order>
+        <published_ref/>
+        <question display_value="Select Action Type">c0652f317b431210d7260a89518cb63e</question>
+        <rec_misc>0</rec_misc>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 08:04:06</sys_created_on>
+        <sys_id>df44bf757b431210d7260a89518cb66b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Delete</sys_name>
+        <sys_package display_value="LibraryManagementSystem" source="sn_lms">e242673d7b031210d7260a89518cb696</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LibraryManagementSystem">e242673d7b031210d7260a89518cb696</sys_scope>
+        <sys_update_name>question_choice_df44bf757b431210d7260a89518cb66b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 08:04:11</sys_updated_on>
+        <text>Delete</text>
+        <value>delete</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=df44bf757b431210d7260a89518cb66b"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="INR">INR</currency>
+        <field>misc</field>
+        <id>df44bf757b431210d7260a89518cb66b</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="INR">INR</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 08:04:06</sys_created_on>
+        <sys_id>3554ff757b431210d7260a89518cb62b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 08:04:06</sys_updated_on>
+        <table>question_choice</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="INR">INR</currency>
+        <field>rec_misc</field>
+        <id>df44bf757b431210d7260a89518cb66b</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="INR">INR</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 08:04:06</sys_created_on>
+        <sys_id>f954ff757b431210d7260a89518cb62a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 08:04:06</sys_updated_on>
+        <table>question_choice</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>

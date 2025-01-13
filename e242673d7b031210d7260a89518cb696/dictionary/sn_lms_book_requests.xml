@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="24c36bbd7b031210d7260a89518cb60b" label="Book_requests" max_length="40" name="sn_lms_book_requests" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="return date" max_length="40" name="return_date" type="glide_date"/>
+    </element>
+</database>

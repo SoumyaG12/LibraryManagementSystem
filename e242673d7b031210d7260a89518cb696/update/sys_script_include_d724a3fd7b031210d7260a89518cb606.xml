@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>sn_lms.BookSearch</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>BookSearch</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var BookSearch = Class.create();
+BookSearch.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    fetchBookDetails: function() {
+        var bookGR = new GlideRecord('sn_lms_books');
+        var book_sys_id = this.getParameter('sysparm_book_sys_id');
+        console.log("-------------", book_sys_id);
+        bookGR.addQuery("sys_id", book_sys_id);
+        bookGR.query();
+        if (bookGR.next()) {
+            // Construct and return the book details as JSON
+			console.log("title", bookGR.book_title);
+            return JSON.stringify({
+                book_title: bookGR.book_title,
+                book_author: bookGR.author,
+                genre: bookGR.genre,
+                total_copies: bookGR.total_copies,
+                available_copies: bookGR.available_copies
+            })
+        } else {
+            return JSON.stringify({});
+        }
+    },
+    type: 'BookSearch'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 06:55:04</sys_created_on>
+        <sys_id>d724a3fd7b031210d7260a89518cb606</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>BookSearch</sys_name>
+        <sys_package display_value="LibraryManagementSystem" source="sn_lms">e242673d7b031210d7260a89518cb696</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="LibraryManagementSystem">e242673d7b031210d7260a89518cb696</sys_scope>
+        <sys_update_name>sys_script_include_d724a3fd7b031210d7260a89518cb606</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 16:09:16</sys_updated_on>
+    </sys_script_include>
+</record_update>

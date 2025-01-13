@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="dc6363bd7b031210d7260a89518cb6ff" label="Books" max_length="40" name="sn_lms_books" type="collection">
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="book_id" max_length="40" name="number" type="string"/>
+        <element label="Available copies" max_length="40" name="available_copies" type="integer"/>
+        <element label="Total copies" max_length="40" name="total_copies" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Book title" max_length="40" name="book_title" type="string"/>
+        <element label="author" max_length="40" name="author" type="string"/>
+        <element label="genre" max_length="40" name="genre" type="string"/>
+    </element>
+</database>
