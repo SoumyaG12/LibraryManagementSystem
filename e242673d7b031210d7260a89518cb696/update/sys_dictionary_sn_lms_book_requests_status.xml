@@ -10,10 +10,10 @@
 	return '';  // return the calculated value
 
 })(current);]]></calculation>
-        <choice>1</choice>
+        <choice>3</choice>
         <choice_field/>
         <choice_table/>
-        <column_label>status</column_label>
+        <column_label>Status</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -51,14 +51,14 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-01-13 17:05:40</sys_created_on>
-        <sys_name>status</sys_name>
+        <sys_created_on>2025-01-16 11:27:22</sys_created_on>
+        <sys_name>Status</sys_name>
         <sys_package display_value="LibraryManagementSystem" source="sn_lms">e242673d7b031210d7260a89518cb696</sys_package>
         <sys_policy/>
         <sys_scope display_value="LibraryManagementSystem">e242673d7b031210d7260a89518cb696</sys_scope>
         <sys_update_name>sys_dictionary_sn_lms_book_requests_status</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-13 17:05:40</sys_updated_on>
+        <sys_updated_on>2025-01-16 11:28:51</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

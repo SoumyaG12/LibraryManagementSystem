@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="LibraryManagementSystem">5914a3bd7b031210d7260a89518cb61a</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>All</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>sn_lms_book_requests</name>
+        <order>6</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <require_confirmation>true</require_confirmation>
+        <roles/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 06:53:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ed14efbd7b031210d7260a89518cb6a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>All</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="LibraryManagementSystem" source="sn_lms">e242673d7b031210d7260a89518cb696</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LibraryManagementSystem">e242673d7b031210d7260a89518cb696</sys_scope>
+        <sys_update_name>sys_app_module_ed14efbd7b031210d7260a89518cb6a1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 06:53:05</sys_updated_on>
+        <timeline_page/>
+        <title>All</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="LibraryManagementSystem">e242673d7b031210d7260a89518cb696</application>
+        <file_path/>
+        <instance_id>e3360171e84312100ad844d95d9a7437</instance_id>
+        <instance_name>glide_db_dump</instance_name>
+        <name>sys_app_module_ed14efbd7b031210d7260a89518cb6a1</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="LibraryManagementSystem">5914a3bd7b031210d7260a89518cb61a</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><mobile_title>All</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>sn_lms_book_requests</name><order>6</order><override_menu_roles>false</override_menu_roles><query/><report/><require_confirmation>true</require_confirmation><roles/><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-01-13 06:53:05</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>ed14efbd7b031210d7260a89518cb6a1</sys_id><sys_mod_count>0</sys_mod_count><sys_name>All</sys_name><sys_overrides/><sys_package display_value="LibraryManagementSystem" source="sn_lms">e242673d7b031210d7260a89518cb696</sys_package><sys_policy/><sys_scope display_value="LibraryManagementSystem">e242673d7b031210d7260a89518cb696</sys_scope><sys_update_name>sys_app_module_ed14efbd7b031210d7260a89518cb6a1</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-01-13 06:53:05</sys_updated_on><timeline_page/><title>All</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>2032849531</payload_hash>
+        <record_name>All</record_name>
+        <reverted_from/>
+        <source>6242ef3d7b031210d7260a89518cb644</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 06:53:05</sys_created_on>
+        <sys_id>6d14efbd7b031210d7260a89518cb6a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1945e6ffe2a0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 06:53:05</sys_updated_on>
+        <type>Module</type>
+        <update_guid>6114efbdf0031210748a5a2094bac0a3</update_guid>
+        <update_guid_history>6114efbdf0031210748a5a2094bac0a3:2032849531</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="All">46bebbb27b875210d7260a89518cb6c7</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 11:23:23</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>d971e8cbce2b4e1ab091d6198a823da4</sys_id>
+        <sys_metadata>ed14efbd7b031210d7260a89518cb6a1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>All</sys_name>
+        <sys_package display_value="LibraryManagementSystem" source="sn_lms">e242673d7b031210d7260a89518cb696</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="LibraryManagementSystem">e242673d7b031210d7260a89518cb696</sys_scope>
+        <sys_scope_delete display_value="">b9b6cf6741f54fb89c8dfb91e8c3c440</sys_scope_delete>
+        <sys_update_name>sys_app_module_ed14efbd7b031210d7260a89518cb6a1</sys_update_name>
+        <sys_update_version display_value="sys_app_module_ed14efbd7b031210d7260a89518cb6a1">6d14efbd7b031210d7260a89518cb6a3</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 11:23:23</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

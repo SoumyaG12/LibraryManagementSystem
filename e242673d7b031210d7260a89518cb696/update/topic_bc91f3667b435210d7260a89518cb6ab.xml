@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="topic">
+    <topic action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <apply_to_child_topics>false</apply_to_child_topics>
+        <available_for/>
+        <banner_image/>
+        <banner_image_url/>
+        <description/>
+        <enable_user_criteria_check>false</enable_user_criteria_check>
+        <icon/>
+        <icon_url/>
+        <name>Library Managment</name>
+        <not_available_for/>
+        <order/>
+        <parent_topic display_value="Additional Services">9f617f267b435210d7260a89518cb6b8</parent_topic>
+        <sys_class_name>topic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-15 15:48:08</sys_created_on>
+        <sys_id>bc91f3667b435210d7260a89518cb6ab</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Library Managment</sys_name>
+        <sys_package display_value="LibraryManagementSystem" source="sn_lms">e242673d7b031210d7260a89518cb696</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LibraryManagementSystem">e242673d7b031210d7260a89518cb696</sys_scope>
+        <sys_update_name>topic_bc91f3667b435210d7260a89518cb6ab</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-15 15:54:35</sys_updated_on>
+        <taxonomy display_value="Employee">1f5d5a40c3203010069aec4b7d40dd93</taxonomy>
+        <template display_value="emp_taxonomy_topic">4fb26c9cc3d030102ec1a589a840ddbd</template>
+        <topic_based_navigation>false</topic_based_navigation>
+        <topic_contributor/>
+        <topic_manager/>
+        <topic_path>Technology services / Additional Services / Library Managment</topic_path>
+    </topic>
+    <sys_translated_text action="delete_multiple" query="documentkey=bc91f3667b435210d7260a89518cb6ab"/>
+</record_update>

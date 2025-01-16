@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="24c36bbd7b031210d7260a89518cb60b" label="Book_requests" max_length="40" name="sn_lms_book_requests" type="collection">
-        <element label="User ID" max_length="32" name="user_id" reference="sys_user" type="reference"/>
-        <element label="Book ID" max_length="32" name="book_id" reference="sn_lms_books" type="reference"/>
-        <element choice="1" label="status" max_length="40" name="status" type="choice">
-            <choice/>
-        </element>
+    <element db_object_id="a43f3bf27b875210d7260a89518cb612" extends="task" label="Book_requests" max_length="40" name="sn_lms_book_requests" type="collection">
+        <element label="Book ID" max_length="40" name="book_id" reference="sn_lms_books" type="string"/>
         <element label="Requested date" max_length="40" name="requested_date" type="glide_date"/>
-        <element attributes="edge_encryption_enabled=true" label="return_date" max_length="40" name="return_date" type="glide_date"/>
-        <index name="index">
-            <element name="book_id"/>
-        </index>
-        <index name="index2">
-            <element name="user_id"/>
-        </index>
+        <element label="Return date" max_length="40" name="return_date" type="glide_date"/>
+        <element label="User ID" max_length="40" name="user_id" reference="sys_user" type="string"/>
+        <element choice="3" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Closed" value="closed"/>
+                <element inactive_on_update="false" label="Approved" value="approved"/>
+                <element inactive_on_update="false" label="Pending" value="pending"/>
+                <element inactive_on_update="false" label="Rejected" value="rejected"/>
+            </choice>
+        </element>
     </element>
 </database>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="DELETE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>sn_lms_book_requests</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Send for Approval</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[
+(function executeRule(current, previous) {
+    var approval = new GlideRecord('sysapproval_approver');
+    approval.initialize(); 
+    approval.sysapproval = 'a9e9c33dc61122760072455df62663d2';
+    approval.approver = '6816f79cc0a8016401c5a33be04be441';  
+    approval.state = 'requested'; 
+	approval.group = 'e9f3ff367b475210d7260a89518cb6bc';
+    approval.insert();
+    
+})(current, previous);
+]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 17:06:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>328f69827b871210d7260a89518cb669</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Send for Approval</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="LibraryManagementSystem" source="sn_lms">e242673d7b031210d7260a89518cb696</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LibraryManagementSystem">e242673d7b031210d7260a89518cb696</sys_scope>
+        <sys_update_name>sys_script_328f69827b871210d7260a89518cb669</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 10:39:48</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="DELETE" query="documentkey=328f69827b871210d7260a89518cb669"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="LibraryManagementSystem">e242673d7b031210d7260a89518cb696</application>
+        <file_path/>
+        <instance_id>e3360171e84312100ad844d95d9a7437</instance_id>
+        <instance_name>glide_db_dump</instance_name>
+        <name>sys_script_328f69827b871210d7260a89518cb669</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script"&gt;&lt;sys_script action="INSERT_OR_UPDATE"&gt;&lt;abort_action&gt;false&lt;/abort_action&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;action_delete&gt;false&lt;/action_delete&gt;&lt;action_insert&gt;true&lt;/action_insert&gt;&lt;action_query&gt;false&lt;/action_query&gt;&lt;action_update&gt;false&lt;/action_update&gt;&lt;active&gt;true&lt;/active&gt;&lt;add_message&gt;false&lt;/add_message&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;change_fields&gt;false&lt;/change_fields&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;collection&gt;sn_lms_book_requests&lt;/collection&gt;&lt;condition/&gt;&lt;description/&gt;&lt;execute_function&gt;false&lt;/execute_function&gt;&lt;filter_condition/&gt;&lt;is_rest&gt;false&lt;/is_rest&gt;&lt;message/&gt;&lt;name&gt;Send for Approval&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;priority&gt;100&lt;/priority&gt;&lt;rest_method/&gt;&lt;rest_method_text/&gt;&lt;rest_service/&gt;&lt;rest_service_text/&gt;&lt;rest_variables/&gt;&lt;role_conditions/&gt;&lt;script&gt;&lt;![CDATA[
+(function executeRule(current, previous) {
+    var approval = new GlideRecord('sysapproval_approver');
+    approval.initialize(); 
+    approval.sysapproval = 'a9e9c33dc61122760072455df62663d2';
+    approval.approver = '6816f79cc0a8016401c5a33be04be441';  
+    approval.state = 'requested'; 
+	approval.group = 'e9f3ff367b475210d7260a89518cb6bc';
+    approval.insert();
+    
+})(current, previous);
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-13 17:06:56&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;328f69827b871210d7260a89518cb669&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name&gt;Send for Approval&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="LibraryManagementSystem" source="sn_lms"&gt;e242673d7b031210d7260a89518cb696&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="LibraryManagementSystem"&gt;e242673d7b031210d7260a89518cb696&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_328f69827b871210d7260a89518cb669&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-16 10:39:48&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;when&gt;after&lt;/when&gt;&lt;/sys_script&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=328f69827b871210d7260a89518cb669"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-184931266</payload_hash>
+        <record_name>Send for Approval</record_name>
+        <reverted_from/>
+        <source>ea36a98a7b471210d7260a89518cb67e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 10:39:48</sys_created_on>
+        <sys_id>3fb4b7767b475210d7260a89518cb689</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1946eb2a2530000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 10:39:48</sys_updated_on>
+        <type>Business Rule</type>
+        <update_guid>33b4b77686475210c7536cac9fe91d89</update_guid>
+        <update_guid_history>33b4b77686475210c7536cac9fe91d89:-184931266,5e82b3f254475210c98295bdcab61126:680709568,0da03f3246475210edd2c8a727d65e4f:1734858068,8dd03326b7435210e375b7ce2eaca21d:-222417531,c4a03d86af8712107bea3a550c865ba1:-80105366,e9907586e487121011e3cdf763cb5482:824456715</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 11:23:24</sys_created_on>
+        <sys_db_object display_value="" name="sys_script">sys_script</sys_db_object>
+        <sys_id>05b7995d515a468282032114d0cba871</sys_id>
+        <sys_metadata>328f69827b871210d7260a89518cb669</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Send for Approval</sys_name>
+        <sys_package display_value="LibraryManagementSystem" source="sn_lms">e242673d7b031210d7260a89518cb696</sys_package>
+        <sys_parent display_value="">24c36bbd7b031210d7260a89518cb60b</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="LibraryManagementSystem">e242673d7b031210d7260a89518cb696</sys_scope>
+        <sys_scope_delete display_value="">b9b6cf6741f54fb89c8dfb91e8c3c440</sys_scope_delete>
+        <sys_update_name>sys_script_328f69827b871210d7260a89518cb669</sys_update_name>
+        <sys_update_version display_value="sys_script_328f69827b871210d7260a89518cb669">3fb4b7767b475210d7260a89518cb689</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 11:23:24</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

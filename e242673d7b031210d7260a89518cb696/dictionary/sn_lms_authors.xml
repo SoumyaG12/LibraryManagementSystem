@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="516813667b035210d7260a89518cb64f" label="Authors" max_length="40" name="sn_lms_authors" type="collection">
+        <element display="true" label="Author name" max_length="40" name="author_name" type="string"/>
+    </element>
+</database>

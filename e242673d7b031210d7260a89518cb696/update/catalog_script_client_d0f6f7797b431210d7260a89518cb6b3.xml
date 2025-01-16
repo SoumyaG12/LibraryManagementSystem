@@ -5,7 +5,7 @@
         <applies_extended>false</applies_extended>
         <applies_req_item>false</applies_req_item>
         <applies_sc_task>false</applies_sc_task>
-        <applies_target_record>false</applies_target_record>
+        <applies_target_record>true</applies_target_record>
         <applies_to>item</applies_to>
         <cat_item display_value="Manage Library Books">00d423317b431210d7260a89518cb6fc</cat_item>
         <cat_variable>IO:c0652f317b431210d7260a89518cb63e</cat_variable>
@@ -28,19 +28,33 @@
    console.log("action_type", action_type);
 
    if(action_type == 'create' || action_type == 'update'){
+		
+			g_form.clearValue('book_title');
+        g_form.clearValue('author_s_name');
+        g_form.clearValue('genre');
+        g_form.clearValue('total_copies');
+        g_form.clearValue('available_copies');
+		 g_form.clearValue('select_book');
+        g_form.setVisible('select_book', action_type == 'update');
 		g_form.setVisible('book_title', true);
         g_form.setVisible('author_s_name', true);
         g_form.setVisible('genre', true);
         g_form.setVisible('total_copies', true);
         g_form.setVisible('available_copies', true);
-        g_form.setVisible('related_book', action_type == 'update');
+        g_form.setVisible('select_book', action_type == 'update');
    }else if(action_type == 'delete'){
+			g_form.clearValue('book_title');
+        g_form.clearValue('author_s_name');
+        g_form.clearValue('genre');
+        g_form.clearValue('total_copies');
+        g_form.clearValue('available_copies');
+		 g_form.clearValue('select_book');
 		g_form.setVisible('book_title', false);
         g_form.setVisible('author_s_name', false);
         g_form.setVisible('genre', false);
         g_form.setVisible('total_copies', false);
         g_form.setVisible('available_copies', false);
-        g_form.setVisible('related_book', true);
+        g_form.setVisible('select_book', true);
    }
    
 }]]></script>
@@ -50,7 +64,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d0f6f7797b431210d7260a89518cb6b3</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Handle action type</sys_name>
         <sys_overrides/>
         <sys_package display_value="LibraryManagementSystem" source="sn_lms">e242673d7b031210d7260a89518cb696</sys_package>
@@ -58,10 +72,10 @@
         <sys_scope display_value="LibraryManagementSystem">e242673d7b031210d7260a89518cb696</sys_scope>
         <sys_update_name>catalog_script_client_d0f6f7797b431210d7260a89518cb6b3</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-13 13:50:42</sys_updated_on>
+        <sys_updated_on>2025-01-16 05:33:55</sys_updated_on>
         <table/>
         <type>onChange</type>
-        <ui_type>0</ui_type>
+        <ui_type>10</ui_type>
         <va_supported>true</va_supported>
         <variable_set/>
         <view/>

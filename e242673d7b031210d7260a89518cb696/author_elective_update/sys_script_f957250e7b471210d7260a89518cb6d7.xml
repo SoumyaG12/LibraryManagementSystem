@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="DELETE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>sn_lms_book_requests</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Update Book Request Record</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+	var request_sys_id = current.getValue('sys_id');
+	
+	if(request_sys_id){
+		console.log("---in update----");
+        var update_request = new GlideRecord('sn_lms_book_requests');
+		update_request.addQuery("sys_id", request_sys_id);
+		update_request.query();
+        if (update_request.next()) {
+			var currentDate = new GlideDate();
+            update_request.requested_date = currentDate;
+            update_request.user_id = gs.getUserID();
+            update_request.status = 'pending';
+			update_request.update();
+        }
+	}
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 16:37:29</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f957250e7b471210d7260a89518cb6d7</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Update Book Request Record</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="LibraryManagementSystem" source="sn_lms">e242673d7b031210d7260a89518cb696</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LibraryManagementSystem">e242673d7b031210d7260a89518cb696</sys_scope>
+        <sys_update_name>sys_script_f957250e7b471210d7260a89518cb6d7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-15 13:43:23</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="DELETE" query="documentkey=f957250e7b471210d7260a89518cb6d7"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="LibraryManagementSystem">e242673d7b031210d7260a89518cb696</application>
+        <file_path/>
+        <instance_id>e3360171e84312100ad844d95d9a7437</instance_id>
+        <instance_name>glide_db_dump</instance_name>
+        <name>sys_script_f957250e7b471210d7260a89518cb6d7</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script"&gt;&lt;sys_script action="INSERT_OR_UPDATE"&gt;&lt;abort_action&gt;false&lt;/abort_action&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;action_delete&gt;false&lt;/action_delete&gt;&lt;action_insert&gt;true&lt;/action_insert&gt;&lt;action_query&gt;false&lt;/action_query&gt;&lt;action_update&gt;false&lt;/action_update&gt;&lt;active&gt;true&lt;/active&gt;&lt;add_message&gt;false&lt;/add_message&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;change_fields&gt;false&lt;/change_fields&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;collection&gt;sn_lms_book_requests&lt;/collection&gt;&lt;condition/&gt;&lt;description/&gt;&lt;execute_function&gt;false&lt;/execute_function&gt;&lt;filter_condition/&gt;&lt;is_rest&gt;false&lt;/is_rest&gt;&lt;message/&gt;&lt;name&gt;Update Book Request Record&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;priority&gt;100&lt;/priority&gt;&lt;rest_method/&gt;&lt;rest_method_text/&gt;&lt;rest_service/&gt;&lt;rest_service_text/&gt;&lt;rest_variables/&gt;&lt;role_conditions/&gt;&lt;script&gt;&lt;![CDATA[(function executeRule(current, previous /*null when async*/) {
+	var request_sys_id = current.getValue('sys_id');
+	
+	if(request_sys_id){
+		console.log("---in update----");
+        var update_request = new GlideRecord('sn_lms_book_requests');
+		update_request.addQuery("sys_id", request_sys_id);
+		update_request.query();
+        if (update_request.next()) {
+			var currentDate = new GlideDate();
+            update_request.requested_date = currentDate;
+            update_request.user_id = gs.getUserID();
+            update_request.status = 'pending';
+			update_request.update();
+        }
+	}
+})(current, previous);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-13 16:37:29&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;f957250e7b471210d7260a89518cb6d7&lt;/sys_id&gt;&lt;sys_mod_count&gt;10&lt;/sys_mod_count&gt;&lt;sys_name&gt;Update Book Request Record&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="LibraryManagementSystem" source="sn_lms"&gt;e242673d7b031210d7260a89518cb696&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="LibraryManagementSystem"&gt;e242673d7b031210d7260a89518cb696&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_f957250e7b471210d7260a89518cb6d7&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-15 13:43:23&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;when&gt;after&lt;/when&gt;&lt;/sys_script&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=f957250e7b471210d7260a89518cb6d7"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1701607632</payload_hash>
+        <record_name>Update Book Request Record</record_name>
+        <reverted_from/>
+        <source>ea36a98a7b471210d7260a89518cb67e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-15 13:43:24</sys_created_on>
+        <sys_id>5b251ba27b035210d7260a89518cb6c8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1946a345ca30000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-15 13:43:24</sys_updated_on>
+        <type>Business Rule</type>
+        <update_guid>5f251ba2e60352109a4e90da6b3d4ac7</update_guid>
+        <update_guid_history>5f251ba2e60352109a4e90da6b3d4ac7:-1701607632,fef417a2ed03521014474d208678215c:-1962098120,5d741b62cd035210dce33f6084f50dd0:-1610785699,d7345762e80352101abce67582bdf274:73437250,55d0d72e3ccf12100ae4b0b66c8780a3:1631498679,3e2ee9ee7fc71210d217c1a92dc42d0a:-484025821,cf9bad6ec1c71210e7b87aa00d5b7383:373595320,4bbaed2e34c71210dd4cc0293c053ac2:1622665539,92fca1829d871210244cc08199df974e:-1684268996,0a1be5027d871210a4d477c911c3af23:207773321,42d9258e164712106b6affb5a8a20c49:2003749620</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 11:23:24</sys_created_on>
+        <sys_db_object display_value="" name="sys_script">sys_script</sys_db_object>
+        <sys_id>045f9307ad8c42a080138456265d2900</sys_id>
+        <sys_metadata>f957250e7b471210d7260a89518cb6d7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Update Book Request Record</sys_name>
+        <sys_package display_value="LibraryManagementSystem" source="sn_lms">e242673d7b031210d7260a89518cb696</sys_package>
+        <sys_parent display_value="">24c36bbd7b031210d7260a89518cb60b</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="LibraryManagementSystem">e242673d7b031210d7260a89518cb696</sys_scope>
+        <sys_scope_delete display_value="">b9b6cf6741f54fb89c8dfb91e8c3c440</sys_scope_delete>
+        <sys_update_name>sys_script_f957250e7b471210d7260a89518cb6d7</sys_update_name>
+        <sys_update_version display_value="sys_script_f957250e7b471210d7260a89518cb6d7">5b251ba27b035210d7260a89518cb6c8</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 11:23:24</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
