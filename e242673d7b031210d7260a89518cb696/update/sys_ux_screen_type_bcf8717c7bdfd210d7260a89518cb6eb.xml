@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_screen_type">
+    <sys_ux_screen_type action="INSERT_OR_UPDATE">
+        <description/>
+        <name>My Book Requests</name>
+        <sys_class_name>sys_ux_screen_type</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-22 06:46:46</sys_created_on>
+        <sys_id>bcf8717c7bdfd210d7260a89518cb6eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>My Book Requests</sys_name>
+        <sys_package display_value="LibraryManagementSystem" source="sn_lms">e242673d7b031210d7260a89518cb696</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LibraryManagementSystem">e242673d7b031210d7260a89518cb696</sys_scope>
+        <sys_update_name>sys_ux_screen_type_bcf8717c7bdfd210d7260a89518cb6eb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-22 06:46:46</sys_updated_on>
+    </sys_ux_screen_type>
+    <sys_translated_text action="delete_multiple" query="documentkey=bcf8717c7bdfd210d7260a89518cb6eb"/>
+</record_update>

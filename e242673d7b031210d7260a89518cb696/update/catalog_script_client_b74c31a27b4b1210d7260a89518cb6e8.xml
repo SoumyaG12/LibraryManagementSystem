@@ -18,12 +18,12 @@
         <name>Book Selection</name>
         <order/>
         <published_ref/>
-        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+        <script><![CDATA[
+function onChange(control, oldValue, newValue, isLoading) {
     if (isLoading || newValue == '') {
         return;
     }
     var book_author = g_form.getValue('book');
-    console.log("book author name", book_author);
     var ga = new GlideAjax('CheckAvailability');
     ga.addParam('sysparm_name', 'checkAvailabilityOfBook');
     ga.addParam('sysparm_book_sys_id', book_author);
@@ -34,25 +34,18 @@
         var jsonObj = JSON.parse(response);
         console.log("--response---", jsonObj);
         if (!jsonObj.is_available) {
-
-            var nearestReturnDate = jsonObj.nearestReturnDate;
+			g_form.clearValue('book');
+            var nearestReturnDate = jsonObj.nearest_return_date;
             if (nearestReturnDate) {
-
-                g_form.addErrorMessage('Book is currently not available. Next available date: ' + jsonObj.nearestReturnDate);
+				
+                g_form.addErrorMessage('Book is currently not available. Next available date: ' + nearestReturnDate);
             } else {
+			
                 g_form.addErrorMessage('Book is currently not available.');
             }
 
         }
     }
-
-    function toggleSubmitButton(enable) {
-        var submitButton = document.querySelector('button[id="submit-btn"]');
-        if (submitButton) {
-            submitButton.disabled = !enable;
-        }
-   }
-
     //Type appropriate comment here, and begin script below
 
 }]]></script>
@@ -62,7 +55,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b74c31a27b4b1210d7260a89518cb6e8</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>29</sys_mod_count>
         <sys_name>Book Selection</sys_name>
         <sys_overrides/>
         <sys_package display_value="LibraryManagementSystem" source="sn_lms">e242673d7b031210d7260a89518cb696</sys_package>
@@ -70,11 +63,11 @@
         <sys_scope display_value="LibraryManagementSystem">e242673d7b031210d7260a89518cb696</sys_scope>
         <sys_update_name>catalog_script_client_b74c31a27b4b1210d7260a89518cb6e8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-16 07:29:11</sys_updated_on>
+        <sys_updated_on>2025-01-20 05:55:04</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>
-        <va_supported>false</va_supported>
+        <va_supported>true</va_supported>
         <variable_set/>
         <view/>
     </catalog_script_client>

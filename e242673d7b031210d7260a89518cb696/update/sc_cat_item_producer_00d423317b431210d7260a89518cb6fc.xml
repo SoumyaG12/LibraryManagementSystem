@@ -6,7 +6,7 @@
         <availability>on_desktop</availability>
         <billable>false</billable>
         <can_cancel>false</can_cancel>
-        <category/>
+        <category display_value="Services">109f0438c6112276003ae8ac13e7009d</category>
         <checked_out/>
         <cost>0</cost>
         <custom_cart/>
@@ -32,7 +32,7 @@
         <mobile_picture_type>use_desktop_picture</mobile_picture_type>
         <model/>
         <name>Manage Library Books</name>
-        <no_attachment_v2>false</no_attachment_v2>
+        <no_attachment_v2>true</no_attachment_v2>
         <no_cart>false</no_cart>
         <no_cart_v2>false</no_cart_v2>
         <no_delivery_time_v2>false</no_delivery_time_v2>
@@ -59,7 +59,7 @@
         <price>0</price>
         <published_ref/>
         <recurring_frequency/>
-        <redirect_url>generated_record</redirect_url>
+        <redirect_url>catalog_home</redirect_url>
         <request_method/>
         <roles/>
         <save_options/>
@@ -70,7 +70,7 @@
 * To access the variables, use `producer.var1` where var1 is the name of the variable
 * To access the Record Producer use `cat_item`
 */]]></save_script>
-        <sc_catalogs/>
+        <sc_catalogs>e0d08b13c3330100c8b837659bba8fb4</sc_catalogs>
         <sc_ic_item_staging/>
         <sc_ic_version/>
         <sc_template/>
@@ -204,14 +204,14 @@ if (producer.action_type == 'create') {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-13 06:58:13</sys_created_on>
         <sys_id>00d423317b431210d7260a89518cb6fc</sys_id>
-        <sys_mod_count>91</sys_mod_count>
+        <sys_mod_count>113</sys_mod_count>
         <sys_name>Manage Library Books</sys_name>
         <sys_package display_value="LibraryManagementSystem" source="sn_lms">e242673d7b031210d7260a89518cb696</sys_package>
         <sys_policy/>
         <sys_scope display_value="LibraryManagementSystem">e242673d7b031210d7260a89518cb696</sys_scope>
         <sys_update_name>sc_cat_item_producer_00d423317b431210d7260a89518cb6fc</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-16 11:21:28</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2025-01-22 08:31:51</sys_updated_on>
         <table_name>sn_lms_books</table_name>
         <taxonomy_topic display_value="Library Managment">bc91f3667b435210d7260a89518cb6ab</taxonomy_topic>
         <template/>
@@ -219,7 +219,7 @@ if (producer.action_type == 'create') {
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>91</version>
+        <version>113</version>
         <view/>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>

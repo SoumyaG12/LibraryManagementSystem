@@ -6,7 +6,7 @@
         <availability>on_desktop</availability>
         <billable>false</billable>
         <can_cancel>false</can_cancel>
-        <category/>
+        <category display_value="Services">109f0438c6112276003ae8ac13e7009d</category>
         <checked_out/>
         <cost>0</cost>
         <custom_cart/>
@@ -70,7 +70,7 @@
 * To access the variables, use `producer.var1` where var1 is the name of the variable
 * To access the Record Producer use `cat_item`
 */]]></save_script>
-        <sc_catalogs/>
+        <sc_catalogs>e0d08b13c3330100c8b837659bba8fb4</sc_catalogs>
         <sc_ic_item_staging/>
         <sc_ic_version/>
         <sc_template/>
@@ -89,14 +89,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-13 16:51:47</sys_created_on>
         <sys_id>3c0d29827b871210d7260a89518cb67c</sys_id>
-        <sys_mod_count>75</sys_mod_count>
+        <sys_mod_count>133</sys_mod_count>
         <sys_name>Raise Book Request</sys_name>
         <sys_package display_value="LibraryManagementSystem" source="sn_lms">e242673d7b031210d7260a89518cb696</sys_package>
         <sys_policy/>
         <sys_scope display_value="LibraryManagementSystem">e242673d7b031210d7260a89518cb696</sys_scope>
         <sys_update_name>sc_cat_item_producer_3c0d29827b871210d7260a89518cb67c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-16 11:21:13</sys_updated_on>
+        <sys_updated_on>2025-01-22 08:30:00</sys_updated_on>
         <table_name>sn_lms_book_requests</table_name>
         <taxonomy_topic display_value="Library Managment">bc91f3667b435210d7260a89518cb6ab</taxonomy_topic>
         <template/>
@@ -104,7 +104,7 @@
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>75</version>
+        <version>133</version>
         <view/>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>

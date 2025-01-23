@@ -8,42 +8,48 @@
         <description/>
         <mobile_callable>false</mobile_callable>
         <name>CheckAvailability</name>
-        <sandbox_callable>false</sandbox_callable>
+        <sandbox_callable>true</sandbox_callable>
         <script><![CDATA[var CheckAvailability = Class.create();
 CheckAvailability.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 
     checkAvailabilityOfBook: function() {
-        var bookId = this.getParameter('sysparm_book_sys_id'); 
-		console.log('---check availability---', bookId);
-        var bookGR = new GlideRecord('sn_lms_books'); 
-		 bookGR.addQuery("sys_id", bookId);
+        var bookId = this.getParameter('sysparm_book_sys_id');
+        console.log('---check availability---', bookId);
+        var bookGR = new GlideRecord('sn_lms_books');
+        bookGR.addQuery("sys_id", bookId);
         bookGR.query();
         if (bookGR.next()) {
-			console.log('---in bookrecord gr---');
+            console.log('---in bookrecord gr---');
             if (bookGR.available_copies.toString() > 0) {
                 return JSON.stringify({
                     is_available: true,
                     nearest_return_date: null,
                 });
             } else {
-				console.log('---in else--');
+                console.log('---in else--');
                 var requestRecord = new GlideRecord('sn_lms_book_requests');
                 requestRecord.addQuery('book_id', bookId);
-                requestRecord.addQuery('status', '!=', 'completed'); 
+                requestRecord.addQuery('status', '!=', 'closed');
                 requestRecord.orderBy('return_date');
                 requestRecord.query();
-				console.log('---rpost query--');
                 if (requestRecord.next()) {
-                    var nearestReturnDate = requestRecord.getValue('return_date');
+					console.log('---rpost query--', requestRecord.return_date);
+					// var date = requestRecord.return_date;
+                    // var returnDate = new GlideDateTime(date);
+
+					// returnDate.addDays(1);
+                   
+                    var nearestReturnDate = requestRecord.return_date;
+                    
                     return JSON.stringify({
                         is_available: false,
                         nearest_return_date: nearestReturnDate.toString(),
                     });
                 }
-				
+
             }
         }
-	console.log('---return json--');
+        console.log('---return json--');
         // If no active requests are found or book not available
         return JSON.stringify({
             is_available: false
@@ -57,13 +63,13 @@ CheckAvailability.prototype = Object.extendsObject(global.AbstractAjaxProcessor,
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-15 07:13:53</sys_created_on>
         <sys_id>3b5b71627b4b1210d7260a89518cb6fb</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>41</sys_mod_count>
         <sys_name>CheckAvailability</sys_name>
         <sys_package display_value="LibraryManagementSystem" source="sn_lms">e242673d7b031210d7260a89518cb696</sys_package>
         <sys_policy>protected</sys_policy>
         <sys_scope display_value="LibraryManagementSystem">e242673d7b031210d7260a89518cb696</sys_scope>
         <sys_update_name>sys_script_include_3b5b71627b4b1210d7260a89518cb6fb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-16 07:18:12</sys_updated_on>
+        <sys_updated_on>2025-01-22 04:57:55</sys_updated_on>
     </sys_script_include>
 </record_update>

@@ -8,7 +8,7 @@
             <choice>
                 <element inactive_on_update="false" label="Closed" value="closed"/>
                 <element inactive_on_update="false" label="Approved" value="approved"/>
-                <element inactive_on_update="false" label="Pending" value="pending"/>
+                <element inactive_on_update="false" label="Requested" value="requested"/>
                 <element inactive_on_update="false" label="Rejected" value="rejected"/>
             </choice>
         </element>

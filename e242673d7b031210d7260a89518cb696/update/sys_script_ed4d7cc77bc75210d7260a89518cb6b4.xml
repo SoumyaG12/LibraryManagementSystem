@@ -32,12 +32,20 @@
         <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
 
     // Add your code here
+	console.log('----current group----', current.group);
+	console.log('----current status----', current.state);
+	console.log('----current.sysapproval---', current.sysapproval);
+
+	if(current.group != 'e9f3ff367b475210d7260a89518cb6bc'){
+		return;
+	}
     var gr = new GlideRecord('sn_lms_book_requests');
     if (current.state == 'requested') {
         return;
     } else if (current.state == 'approved') {
         gr.addQuery('sys_id', current.sysapproval);
         gr.query();
+		
         if (gr.next()) {
             gr.status = 'approved';
             gr.update();
@@ -49,7 +57,7 @@
             gr.status = 'rejected';
             gr.update();
         }
-    } else if (current.state == 'completed') {
+    } else if (current.state == 'not_required') {
         gr.addQuery('sys_id', current.sysapproval);
         gr.query();
         if (gr.next()) {
@@ -65,7 +73,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ed4d7cc77bc75210d7260a89518cb6b4</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Update Book Request Status</sys_name>
         <sys_overrides/>
         <sys_package display_value="LibraryManagementSystem" source="sn_lms">e242673d7b031210d7260a89518cb696</sys_package>
@@ -73,7 +81,7 @@
         <sys_scope display_value="LibraryManagementSystem">e242673d7b031210d7260a89518cb696</sys_scope>
         <sys_update_name>sys_script_ed4d7cc77bc75210d7260a89518cb6b4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-16 16:02:27</sys_updated_on>
+        <sys_updated_on>2025-01-17 10:44:30</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

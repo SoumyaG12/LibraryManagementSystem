@@ -15,7 +15,7 @@
         <global>true</global>
         <isolate_script>true</isolate_script>
         <messages/>
-        <name>Fetch BookList By Author</name>
+        <name>Clear BookValue</name>
         <order/>
         <published_ref/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
@@ -32,18 +32,18 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6dbd1b2e7b035210d7260a89518cb62e</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>Fetch BookList By Author</sys_name>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Clear BookValue</sys_name>
         <sys_overrides/>
         <sys_package display_value="LibraryManagementSystem" source="sn_lms">e242673d7b031210d7260a89518cb696</sys_package>
         <sys_policy/>
         <sys_scope display_value="LibraryManagementSystem">e242673d7b031210d7260a89518cb696</sys_scope>
         <sys_update_name>catalog_script_client_6dbd1b2e7b035210d7260a89518cb62e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-16 07:29:14</sys_updated_on>
+        <sys_updated_on>2025-01-20 05:32:59</sys_updated_on>
         <table/>
         <type>onChange</type>
-        <ui_type>0</ui_type>
+        <ui_type>10</ui_type>
         <va_supported>true</va_supported>
         <variable_set/>
         <view/>

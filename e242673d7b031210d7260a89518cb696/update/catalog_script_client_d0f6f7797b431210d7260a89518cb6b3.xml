@@ -35,7 +35,12 @@
         g_form.clearValue('total_copies');
         g_form.clearValue('available_copies');
 		 g_form.clearValue('select_book');
-        g_form.setVisible('select_book', action_type == 'update');
+		 g_form.setMandatory('book_title', true);
+        g_form.setMandatory('author_s_name', true);
+        g_form.setMandatory('genre', true);
+		g_form.setMandatory('select_book', action_type == 'update');
+        g_form.setMandatory('total_copies', true);
+        g_form.setMandatory('available_copies', true);
 		g_form.setVisible('book_title', true);
         g_form.setVisible('author_s_name', true);
         g_form.setVisible('genre', true);
@@ -49,6 +54,14 @@
         g_form.clearValue('total_copies');
         g_form.clearValue('available_copies');
 		 g_form.clearValue('select_book');
+		
+			 g_form.setMandatory('book_title', false);
+        g_form.setMandatory('author_s_name', false);
+        g_form.setMandatory('genre', false);
+		g_form.setMandatory('select_book', true);
+        g_form.setMandatory('total_copies', false);
+        g_form.setMandatory('available_copies',false);
+
 		g_form.setVisible('book_title', false);
         g_form.setVisible('author_s_name', false);
         g_form.setVisible('genre', false);
@@ -64,7 +77,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d0f6f7797b431210d7260a89518cb6b3</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>Handle action type</sys_name>
         <sys_overrides/>
         <sys_package display_value="LibraryManagementSystem" source="sn_lms">e242673d7b031210d7260a89518cb696</sys_package>
@@ -72,7 +85,7 @@
         <sys_scope display_value="LibraryManagementSystem">e242673d7b031210d7260a89518cb696</sys_scope>
         <sys_update_name>catalog_script_client_d0f6f7797b431210d7260a89518cb6b3</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-16 05:33:55</sys_updated_on>
+        <sys_updated_on>2025-01-22 08:31:51</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>

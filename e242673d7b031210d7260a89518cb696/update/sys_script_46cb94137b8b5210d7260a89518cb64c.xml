@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>sysapproval_approver</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="sysapproval_approver">stateVALCHANGES^EQ<item endquery="false" field="state" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Auto Approval</name>
+        <order>1</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+
+
+    var book_request_id = current.getValue('sysapproval');
+    var approval_sysId = current.getValue('sys_id');
+
+	if(current.group != 'e9f3ff367b475210d7260a89518cb6bc'){
+		return;
+	}
+    var bookReqGR = new GlideRecord('sn_lms_book_requests');
+    bookReqGR.addQuery('sys_id', book_request_id);
+    bookReqGR.query();
+    if (bookReqGR.next()) {
+		console.log("-----in approvals----");
+        var requestedDate = new GlideDateTime(bookReqGR.requested_date);
+        var returnDate = new GlideDateTime(bookReqGR.return_date);
+
+        // Add 15 days to the requested date
+        requestedDate.addDaysUTC(15);
+		console.log("-----in approvals----request date ----", requestedDate);
+		console.log("-----in approvals----return date----", returnDate);
+        if (returnDate <= requestedDate) {
+            var approveGR = new GlideRecord('sysapproval_approver');
+            approveGR.addQuery('sys_id', approval_sysId);
+            approveGR.query();
+            if (approveGR.next()) {
+                approveGR.state = 'approved';
+                approveGR.update();
+            }
+        }
+    }
+
+
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-17 08:16:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>46cb94137b8b5210d7260a89518cb64c</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Auto Approval</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="LibraryManagementSystem" source="sn_lms">e242673d7b031210d7260a89518cb696</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LibraryManagementSystem">e242673d7b031210d7260a89518cb696</sys_scope>
+        <sys_update_name>sys_script_46cb94137b8b5210d7260a89518cb64c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-20 06:11:44</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=46cb94137b8b5210d7260a89518cb64c"/>
+</record_update>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-17 05:46:54</sys_created_on>
+        <sys_id>084bbf0f7b0b5210d7260a89518cb672</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sn_lms_book_requests.sn_lms.librarian</sys_name>
+        <sys_package display_value="LibraryManagementSystem" source="sn_lms">e242673d7b031210d7260a89518cb696</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LibraryManagementSystem">e242673d7b031210d7260a89518cb696</sys_scope>
+        <sys_security_acl display_value="sn_lms_book_requests">64af73367b875210d7260a89518cb639</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_084bbf0f7b0b5210d7260a89518cb672</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-17 05:46:54</sys_updated_on>
+        <sys_user_role display_value="sn_lms.librarian" name="sn_lms.librarian">c162673d7b031210d7260a89518cb6f2</sys_user_role>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="LibraryManagementSystem">e242673d7b031210d7260a89518cb696</application>
+        <file_path/>
+        <instance_id>e3360171e84312100ad844d95d9a7437</instance_id>
+        <instance_name>glide_db_dump</instance_name>
+        <name>sys_security_acl_role_084bbf0f7b0b5210d7260a89518cb672</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-01-17 05:46:54</sys_created_on><sys_id>084bbf0f7b0b5210d7260a89518cb672</sys_id><sys_mod_count>0</sys_mod_count><sys_name>sn_lms_book_requests.sn_lms.librarian</sys_name><sys_package display_value="LibraryManagementSystem" source="sn_lms">e242673d7b031210d7260a89518cb696</sys_package><sys_policy/><sys_scope display_value="LibraryManagementSystem">e242673d7b031210d7260a89518cb696</sys_scope><sys_security_acl display_value="sn_lms_book_requests">64af73367b875210d7260a89518cb639</sys_security_acl><sys_update_name>sys_security_acl_role_084bbf0f7b0b5210d7260a89518cb672</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-01-17 05:46:54</sys_updated_on><sys_user_role display_value="sn_lms.librarian" name="sn_lms.librarian">c162673d7b031210d7260a89518cb6f2</sys_user_role></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>-306971506</payload_hash>
+        <record_name>sn_lms_book_requests.sn_lms.librarian</record_name>
+        <reverted_from/>
+        <source>ea36a98a7b471210d7260a89518cb67e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-17 05:46:54</sys_created_on>
+        <sys_id>4f4bff0f7b0b5210d7260a89518cb625</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19472ccd7800000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-17 05:46:54</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>434bff0fbd0b52103b6b89c9b9cc3325</update_guid>
+        <update_guid_history>434bff0fbd0b52103b6b89c9b9cc3325:-306971506</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="sn_lms_book_requests.sn_lms.librarian">5254401b7b4b5210d7260a89518cb6d3</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-17 06:26:27</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>008da51f2e9d498e80005fc8b1ceed04</sys_id>
+        <sys_metadata>084bbf0f7b0b5210d7260a89518cb672</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sn_lms_book_requests.sn_lms.librarian</sys_name>
+        <sys_package display_value="LibraryManagementSystem" source="sn_lms">e242673d7b031210d7260a89518cb696</sys_package>
+        <sys_parent display_value="sn_lms_book_requests">64af73367b875210d7260a89518cb639</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="LibraryManagementSystem">e242673d7b031210d7260a89518cb696</sys_scope>
+        <sys_scope_delete display_value="">b9b6cf6741f54fb89c8dfb91e8c3c440</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_084bbf0f7b0b5210d7260a89518cb672</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_084bbf0f7b0b5210d7260a89518cb672">4f4bff0f7b0b5210d7260a89518cb625</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-17 06:26:27</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

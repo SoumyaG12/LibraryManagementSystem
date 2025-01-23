@@ -38,7 +38,7 @@
         <lookup_value/>
         <macro/>
         <macroponent/>
-        <mandatory>false</mandatory>
+        <mandatory>true</mandatory>
         <map_to_field>true</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
@@ -79,14 +79,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-15 06:30:18</sys_created_on>
         <sys_id>21f139267b0b1210d7260a89518cb62f</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Return Date</sys_name>
         <sys_package display_value="LibraryManagementSystem" source="sn_lms">e242673d7b031210d7260a89518cb696</sys_package>
         <sys_policy/>
         <sys_scope display_value="LibraryManagementSystem">e242673d7b031210d7260a89518cb696</sys_scope>
         <sys_update_name>item_option_new_21f139267b0b1210d7260a89518cb62f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-15 06:42:04</sys_updated_on>
+        <sys_updated_on>2025-01-21 09:12:31</sys_updated_on>
         <table/>
         <tooltip/>
         <topic_block/>

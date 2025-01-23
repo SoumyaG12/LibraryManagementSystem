@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+ c.bookRequests = c.data.bookRequests;
+    c.title = c.data.title;
+
+    // Refresh book requests (optional feature for dynamic updates)
+    c.refreshBookRequests = function() {
+        $http.get('/api/now/table/sn_lms_book_requests').then(function(response) {
+            c.bookRequests = response.data.result; // Update with refreshed data
+        });
+    };
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  angular.module('sn.$sp').directive('bookRequestsWidget', function() {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            // Add hover effect for table rows
+            element.find('tr').on('mouseenter', function() {
+                angular.element(this).addClass('hover-highlight');
+            });
+
+            element.find('tr').on('mouseleave', function() {
+                angular.element(this).removeClass('hover-highlight');
+            });
+
+            // Add event listener for a "details" button (if applicable)
+            element.find('.details-btn').on('click', function() {
+                alert('Details clicked for: ' + angular.element(this).data('bookTitle'));
+            });
+        }
+    };
+});
+
+}]]></link>
+        <name>My Book Requests</name>
+        <option_schema/>
+        <public>false</public>
+        <roles>admin,sn_lms.library_user</roles>
+        <script><![CDATA[(function() {
+    // Fetch the current logged-in user
+    var userId = gs.getUserID();
+
+    // Query the book request records for the logged-in user
+    var bookRequestsGR = new GlideRecord('sn_lms_book_requests');
+    bookRequestsGR.addQuery('user_id', userId);
+    bookRequestsGR.orderByDesc('sys_created_on');
+    bookRequestsGR.query();
+
+    // Populate data for the widget
+    data.bookRequests = [];
+    while (bookRequestsGR.next()) {
+        data.bookRequests.push({
+            sys_id: bookRequestsGR.sys_id,
+           // title: bookRequestsGR.getValue('u_book_title'),
+            status: bookRequestsGR.status,
+            return_date: bookRequestsGR.return_date
+        });
+    }
+
+    // Additional information for the widget
+    data.title = "My Book Requests";
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-21 16:12:37</sys_created_on>
+        <sys_id>c39da2247b1fd210d7260a89518cb606</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>My Book Requests</sys_name>
+        <sys_package display_value="LibraryManagementSystem" source="sn_lms">e242673d7b031210d7260a89518cb696</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LibraryManagementSystem">e242673d7b031210d7260a89518cb696</sys_scope>
+        <sys_update_name>sp_widget_c39da2247b1fd210d7260a89518cb606</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-21 16:12:37</sys_updated_on>
+        <template><![CDATA[<div>
+    <h2>{{ c.title }}</h2>
+    <button ng-click="c.refreshBookRequests()">Refresh</button>
+    <table class="table table-striped" book-requests-widget>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Status</th>
+                <th>Return Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="request in c.bookRequests">
+                <td>{{ request.title }}</td>
+                <td>{{ request.status }}</td>
+                <td>{{ request.return_date }}</td>
+                <td>
+                    <button class="details-btn" data-book-title="{{ request.title }}">Details</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>
